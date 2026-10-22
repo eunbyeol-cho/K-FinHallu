@@ -1,0 +1,22 @@
+# restored / generated data (contains AI-Hub source text: never commit)
+data/full/
+data/preprocessed/
+data/preprocessed_train/
+data/sft/
+dataset_creation/work/
+vector_db_cache/
+results/
+
+# secrets
+.env
+service_account.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store

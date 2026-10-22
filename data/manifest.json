@@ -1,0 +1,31 @@
+{
+  "description": "sha256 of the files used for the paper experiments. scripts/restore_data.py must reproduce them exactly.",
+  "files": {
+    "kfinhallu_test.json": {
+      "sha256": "d72211b48d03db3f6bbf1aa21f579d14c5e60676feb26a73896811d02401d3c3",
+      "records": 404
+    },
+    "kfinhallu_train.json": {
+      "sha256": "9ba74890c46277ac458d9ba8ce6f6e89dc4c1b4d30a6500958b6bc84115a39bb",
+      "records": 1312
+    },
+    "context_mapping_test.json": {
+      "sha256": "e39656df87638f6a735544ca877a192957a2c3cda5771fcfb02a18e7b1175499",
+      "records": 2108
+    },
+    "context_mapping_train.json": {
+      "sha256": "ebe4c3b8f9247f19fd207b54c864cce2203acd5305ba1653b41368b594fc94e3",
+      "records": 33368
+    }
+  },
+  "downstream": {
+    "test/preprocessed_hallucination_mode.json": "c764c457d0532787f2f05abc5407944168ef8905435318ddf88ad98ee91ace79",
+    "test/preprocessed_faithful_mode.json": "15215a672372492b00601a4218cab0cbd71dca8baafb82bbf603326b3910e78d",
+    "train/preprocessed_hallucination_mode.json": "f287cacf7b17fb30567e27143e44daa442f0c3ff33549edf181c2e8c6b9fe175",
+    "train/preprocessed_faithful_mode.json": "e9a6ec5edb6c9bd3fce9cec8455fc86acce9b912c54e8cdcfd44f74335bddea0",
+    "sft/train_fourclass.jsonl": "978dd8e66723e432f6c6547fc72a672f567e50950d25c28dabb2b42bcd178b60",
+    "sft/train_fourclass_v2.jsonl": "cd393155b78039a2823a8b30bba95821cc95fd2779a005b60fb91ea05fdeee55",
+    "sft/val_fourclass.jsonl": "3c5beacb8a6e55ac3457b0d97f5f47a406c61e489fe8163782fc938fd352c083",
+    "sft/val_fourclass_v2.jsonl": "5e62699bdcebea8b3c546e1c9e15442fc5a2c1092ed57bb319f2c9380d9470ef"
+  }
+}

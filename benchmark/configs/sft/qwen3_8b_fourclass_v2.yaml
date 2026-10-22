@@ -1,0 +1,53 @@
+# Qwen3-8B 4-class SFT Configuration v2 (think mode 활성화)
+#
+# v1 대비 변경점:
+#   - 판단근거를 <think> 블록 안에 배치 → 모델이 추론 과정 학습
+#   - loss_scale=ignore_empty_think 제거 → think 내용도 loss에 포함
+#   - negative context 시 질문 언급 추가
+#   - 인퍼런스: enable_thinking 기본값 (활성화)
+#
+# Dataset: ~2624 samples (1312 faithful + 1312 hallucination, 4-class)
+# Train: 2362 / Val: 262
+
+model: Qwen/Qwen3-8B
+train_type: lora
+torch_dtype: bfloat16
+
+# LoRA settings
+lora_rank: 8
+lora_alpha: 32
+target_modules: all-linear
+lora_dropout: 0.05
+
+# Training hyperparameters
+num_train_epochs: 3
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 2
+learning_rate: 1e-4
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.1
+
+max_length: 8192
+
+# DataLoader
+dataloader_num_workers: 4
+dataloader_pin_memory: true
+
+# Gradient checkpointing
+gradient_checkpointing: true
+
+# Evaluation & saving
+eval_steps: 25
+save_steps: 25
+save_total_limit: 5
+logging_steps: 5
+
+# Qwen3 thinking mode: think 블록에 실제 추론 포함 → loss_scale 불필요
+# (빈 think 블록일 때만 ignore_empty_think 사용)
+
+# Task: fourclass_v2 → data/sft/train_fourclass_v2.jsonl
+classification_type: fourclass_v2
+
+# Model cache (set HF_CACHE env var to customize, or uses HuggingFace default)
+# model_cache_dir: /path/to/huggingface/hub

@@ -1,0 +1,38 @@
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+K-FinHallu Benchmark and Code
+Copyright (c) 2026 The K-FinHallu Authors
+
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License (CC BY-NC 4.0). To view a copy of this license, visit
+https://creativecommons.org/licenses/by-nc/4.0/
+
+You are free to:
+
+  Share — copy and redistribute the material in any medium or format
+  Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+
+  Attribution — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+  NonCommercial — You may not use the material for commercial purposes.
+
+  No additional restrictions — You may not apply legal terms or technological
+  measures that legally restrict others from doing anything the license
+  permits.
+
+==============================================================================
+
+IMPORTANT: This license applies to the K-FinHallu code, the constructed
+dialogues, and the hallucination annotations. The source passages used in the
+dataset are derived from the AI-Hub "Korean Financial and Legal Document
+Machine Reading Comprehension" dataset and are subject to AI-Hub's separate
+terms of use (see NOTICE.md and https://aihub.or.kr).
+
+The full legal text of the Creative Commons Attribution-NonCommercial 4.0
+International License is available at:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
